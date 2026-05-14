@@ -6,29 +6,21 @@ compatibility_flags = ["nodejs_compat"]
 # ============================================================
 # Cloudflare D1 — relational database (SQLite via Drizzle ORM)
 # ============================================================
-# 🔧 Replace <YOUR_D1_DATABASE_ID> with the actual D1 database ID
-#    created via: wrangler d1 create cva-hub-db
 [[d1_databases]]
 binding = "DB"
 database_name = "cva-hub-db"
-database_id = "<YOUR_D1_DATABASE_ID>"
+database_id = "b3d92bc0-9d20-4c2a-827b-605f82d7c1d1"
 
 # ============================================================
 # Cloudflare R2 — object storage (file uploads, attachments)
 # ============================================================
-# 🔧 Replace <YOUR_R2_BUCKET_NAME> and <YOUR_R2_BUCKET_ID> with
-#    the actual bucket name and ID created via:
-#    wrangler r2 bucket create cva-hub-uploads
 [[r2_buckets]]
 binding = "FILES"
 bucket_name = "cva-hub-uploads"
-bucket_id = "<YOUR_R2_BUCKET_ID>"
 
 # ============================================================
 # Cloudflare KV — session storage (Lucia auth sessions)
 # ============================================================
-# 🔧 Replace <YOUR_KV_NAMESPACE_ID> with the actual KV namespace
-#    created via: wrangler kv namespace create "SESSIONS"
 [[kv_namespaces]]
 binding = "SESSIONS"
-id = "<YOUR_KV_NAMESPACE_ID>"
+id = "7a12222520c242bbbe7ac97d4c10e7ab"
